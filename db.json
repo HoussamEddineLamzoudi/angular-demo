@@ -1,36 +1,22 @@
 {
-  "pposts": [
+  "tasks": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "text": "Doctors Appointment",
+      "day": "May 5th at 2:30pm",
+      "reminder": true
     },
     {
       "id": 2,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    }
-  ],
-  "profile": {
-    "name": "typicode"
-  },
-  "tasks":[
-    {
-      "id" : 1,
-      "taskBody" : "ok do it",
-    "staty" : false
+      "text": "Meeting at School",
+      "day": "May 6th at 2:30pm",
+      "reminder": true
     },
     {
-      "id" : 2,
-      "taskBody" : "ok do it",
-    "staty" : false
+      "id": 3,
+      "text": "Food Shopping",
+      "day": "May 7th at 12:30pm",
+      "reminder": false
     }
   ]
 }
