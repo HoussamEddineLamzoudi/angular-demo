@@ -9,6 +9,6 @@ export class ButtonComponent {
 
   @Input() text:String = 'button';
   @Input() color : String = 'blue';
-  
+
 
 }

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Task } from './../../Task.interface';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-task',
@@ -6,7 +7,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./task.component.css']
 })
 export class TaskComponent {
+
+  @Input() task:Task
+
   onClick(){
     console.log("Done");
+  }
+
+  ngOnInit():void{
+
   }
 }
