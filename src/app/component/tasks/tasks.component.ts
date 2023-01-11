@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./tasks.component.css']
 })
 export class TasksComponent {
-
+  tasks=[
+    "task1",
+    "task2"
+  ]
 }

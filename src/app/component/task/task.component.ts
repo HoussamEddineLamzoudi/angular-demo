@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./task.component.css']
 })
 export class TaskComponent {
-
+  onClick(){
+    console.log("Done");
+  }
 }
