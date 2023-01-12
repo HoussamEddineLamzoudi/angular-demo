@@ -1,4 +1,6 @@
-<div class="flex mt-5">
-  <input class="shadow appearance-none border rounded w-full py-2 px-3 mr-4 text-grey-darker outline-green-200" placeholder="Add Todo">
-  <app-button color="green" text="add task"></app-button>
+<div class="mt-5">
+  <form class="flex" (ngSubmit)="onSubmit()">
+    <input class="shadow appearance-none border rounded w-full py-2 px-3 mr-4 text-grey-darker outline-green-200" placeholder="Add Task" name="taskBody" [(ngModel)]="taskBody">
+    <app-button color="green" text="add task"></app-button>
+  </form>
 </div>

@@ -21,7 +21,7 @@ export class TasksComponent {
   deleteTask(taskId:number){
     console.log("deleteTask()");
     console.log(taskId);
-    this.taskService.deleteTask(taskId).subscribe(
+    this.taskService.removeTask(taskId).subscribe(
       () => (this.tasks = this.tasks.filter((e) => e.id !== taskId))
       );
   }
@@ -29,5 +29,10 @@ export class TasksComponent {
   changeRiminderValue(task:Task){
     task.reminder = !task.reminder;
     this.taskService.updateTask(task).subscribe();
+  }
+
+  public addTask(task:Task):void {
+
+    this.taskService.saveTask(task).subscribe((task) => (this.tasks.push(task)))
   }
 }

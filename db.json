@@ -31,16 +31,16 @@
       "reminder": true
     },
     {
-      "id": 6,
-      "text": "test",
-      "day": "test",
-      "reminder": true
-    },
-    {
       "id": 10,
       "text": "new task for testing the api",
       "day": "May 7th at 12:30pm",
       "reminder": true
+    },
+    {
+      "text": "okok",
+      "day": "May 6th at 2:30pm",
+      "reminder": true,
+      "id": 12
     }
   ]
 }
