@@ -1,5 +1,7 @@
 import { Component, Output, EventEmitter } from '@angular/core';
 import { Task } from 'src/app/Task.interface';
+import { UiService } from 'src/app/services/ui/ui.service';
+import {Subscription} from 'rxjs'
 
 @Component({
   selector: 'app-add-task',
@@ -9,10 +11,19 @@ import { Task } from 'src/app/Task.interface';
 export class AddTaskComponent {
   taskBody: string = '';
 
+  showAddTask: boolean;
+  subscription: Subscription;
+
+  constructor(private uiService:UiService) {
+    this.subscription = this.uiService.onToggle().subscribe(
+      value => this.showAddTask = value
+    )
+  }
+
   @Output() newTaskEvent: EventEmitter<Task> = new EventEmitter();
 
   public onSubmit(){
-    
+
     if(!this.taskBody){
       alert('Please add a task')
       return;
@@ -25,5 +36,11 @@ export class AddTaskComponent {
 
     this.newTaskEvent.emit(newTask);
     this.taskBody = '';
+  }
+
+
+  public toggleaddTask(){
+    console.log("toggleaddtoggleadd");
+    this.uiService.toggleAddTask();
   }
 }

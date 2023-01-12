@@ -1,6 +1,7 @@
 import { Task } from './../../Task.interface';
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 
+
 @Component({
   selector: 'app-task',
   templateUrl: './task.component.html',
@@ -12,9 +13,7 @@ export class TaskComponent {
   @Output() deleteItemEvent: EventEmitter<number> = new EventEmitter();
   @Output() reminderEvent: EventEmitter<Task> = new EventEmitter();
 
-  onClick(){
-    console.log("Done");
-  }
+  
 
   onDelete(taskId?:number):void{
     console.log(taskId);
