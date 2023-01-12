@@ -25,4 +25,9 @@ export class TasksComponent {
       () => (this.tasks = this.tasks.filter((e) => e.id !== taskId))
       );
   }
+
+  changeRiminderValue(task:Task){
+    task.reminder = !task.reminder;
+    this.taskService.updateTask(task).subscribe();
+  }
 }

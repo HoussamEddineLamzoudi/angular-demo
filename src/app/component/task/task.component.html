@@ -1,5 +1,5 @@
 <div [ngClass]="{'border-l-4 border-green-500': task.reminder}" class="flex mb-4 items-center gap-4 p-3 ">
-  <div class="w-full">
+  <div class="w-full" (dblclick)="onToggle(task)">
     <p class="text-xl text-grey-darkest">{{task.text}}</p>
     <p class="text-sm font-bold text-grey-darkest">{{task.day}}</p>
   </div>
