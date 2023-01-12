@@ -17,4 +17,12 @@ export class TasksComponent {
   ngOnInit(): void{
     this.taskService.getTasks().subscribe((returnTtasks) => (this.tasks=returnTtasks));
   }
+
+  deleteTask(taskId:number){
+    console.log("deleteTask()");
+    console.log(taskId);
+    this.taskService.deleteTask(taskId).subscribe(
+      () => (this.tasks = this.tasks.filter((e) => e.id !== taskId))
+      );
+  }
 }
